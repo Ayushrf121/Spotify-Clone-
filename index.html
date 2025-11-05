@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotifyClone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="icon" href="spotify.png">
+</head>
+
+<body>
+    <!-- Nav Bar.... -->
+    <nav id="home">
+        <i class="fa-solid fa-bars" id="menuIcon"></i> <!--Currently not showing at 875px it appears-->
+        <a href="#home"><img src="logo.svg" alt="Spotify Icon" id="spotifyIcon"></a>
+        <div class="navDiv1">
+            <a href="#home"><img src="home.svg" alt="Home Icon"></a>
+            <div class="Searching-Box">
+                <!-- Search icon id,input type id -->
+                <img src="search.svg" alt="Search Icon" id="SearchSong"
+                    style="background-color: #1F1F1F; cursor: pointer;">
+                <input id="NavSearch" type="text" placeholder="Search your song..." autocomplete="off"
+                    spellcheck="false" autocorrect="off">
+            </div>
+        </div>
+        <div class="navDiv2">
+            <div class="nD2One">
+                <a href="https://www.spotify.com/in-en/premium/" target="_blank">
+                    <span>Premium</span>
+                </a>
+                <a href="http://support.spotify.com/in-en/" target="_blank">
+                    <span>Support</span>
+                </a>
+                <a href="https://www.spotify.com/in-en/download/windows/" target="_blank">
+                    <span>Download</span>
+                </a>
+            </div>
+            <div class="nD2Two">
+                <img src="downArrow.svg" alt="Down Arrow Icon">
+                <a href="https://open.spotify.com/download"><span>Install App</span></a>
+            </div>
+            <a href="#"><span>Sign up</span></a>
+            <button>Log in</button>
+        </div>
+    </nav>
+    <main>
+        <!-- Section1 -->
+        <div class="leftMainDiv mainDiv">
+            <div class="LMD1">
+                <span>Your Library</span>
+                <img class="invert" src="plus.svg" alt="plusSign">
+            </div>
+            <div class="LMD2 leftScrollableDiv">
+                <div class="LSD1 LSD">
+                    <span>Create your first playlist</span>
+                    <span>it's easy,we'll help you</span>
+                    <a href="https://open.spotify.com/playlist/3lMnt1hQ7UjXv319iHJ9pQ"
+                        class="leftclickbutton lcb1">Create playlist</a>
+                </div>
+                <div class="LSD2 LSD">
+                    <span>Let's find some podcasts to follow</span>
+                    <span>We'll keep you updated on new episodes</span>
+                    <a href="https://open.spotify.com/home?facet=podcasts-chip" class="leftclickbutton lcb2">Browse podcasts</a>
+                </div>
+            </div>
+            <div class="LMD3">
+                <div class="LMD3-div">
+                    <a href="https://www.spotify.com/in-en/legal/end-user-agreement/">
+                        <span class="LMD3-span">Legal</span>
+                    </a>
+                    <a href="https://www.spotify.com/in-en/safetyandprivacy">
+                        <span class="LMD3-span">Safety & Privacy Center</span>
+                    </a>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/">
+                        <span class="LMD3-span">Privacy Policy</span>
+                    </a>
+                </div>
+                <div class="LMD3-div">
+                    <a href="https://www.spotify.com/in-en/legal/cookies-policy/">
+                        <span class="LMD3-span">Cookies</span>
+                    </a>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">
+                        <span class="LMD3-span">About Ads</span>
+                    </a>
+                    <a href="https://www.spotify.com/in-en/accessibility">
+                        <span class="LMD3-span">Accessibility </span>
+                    </a>
+                </div>
+            </div>
+            <a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a>
+            <select name="select" id="language">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="fr">French</option>
+                <option value="ge">German</option>
+                <option value="por">Portuguese</option>
+            </select>
+        </div>
+        <!-- Section2 -->
+        <div class="rightMainDiv mainDiv">
+            <h1>Trending songs</h1>
+            <!-- Entire Playlist Cards -->
+            <div class="cardContainer">
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage1.jpeg" data-songs="Songs/Blue Yung Kai - PagalWorld.mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage1.jpeg" alt="">
+                    <a href="Songs/Blue Yung Kai - PagalWorld.mp3">
+                        <h4>Blue Yung Kai</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Eiffel 65</a>
+                        ,
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Billie Eilish</a>
+                    </span>
+                </div>
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage2.jpeg" data-songs="Songs/Ve Haaniyaan-128kbps.mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage2.jpeg" alt="">
+                    <a href="Songs/Ve Haaniyaan-128kbps.mp3">
+                        <h4>Ve haaniyan</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Avy Sra</a>
+                        ,
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Danny</a>
+                        ,
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Sagar</a>
+                    </span>
+                </div>
+
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage3.jpeg"
+                        data-songs="Songs/Post Malone, Swae Lee - Sunflower (Spider-Man Into the Spider-Verse).mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage3.jpeg" alt="">
+                    <a href="Songs/Post Malone, Swae Lee - Sunflower (Spider-Man Into the Spider-Verse).mp3">
+                        <h4>Sunflower (Spider-Man Into the Spider-Verse)</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Post Malone</a>
+                        ,
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Swae Lee</a>
+                    </span>
+                </div>
+
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage4.jpeg"
+                        data-songs="Songs/Dil Diyan Gallan - Tiger Zinda Hai 128 Kbps.mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage4.jpeg" alt="">
+                    <a href="Songs/Dil Diyan Gallan - Tiger Zinda Hai 128 Kbps.mp3">
+                        <h4>Dil Diyan Gallan</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Atif Aslam</a>
+                    </span>
+                </div>
+
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage5.jpeg"
+                        data-songs="Songs/On The Floor Lofi Chase(PagalWorld).mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage5.jpeg" alt="">
+                    <a href="Songs/On The Floor Lofi Chase(PagalWorld).mp3">
+                        <h4>On The Floor Lofi Chase....</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Jennifer Lopez</a>
+                    </span>
+                </div>
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage6.jpeg" data-songs="Songs/Ye Waadiyan - SoundWorldz.mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage6.jpeg" alt="">
+                    <a href="Songs/Ye Waadiyan - SoundWorldz.mp3">
+                        <h4>Ye Waadiyan</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Navjot Ahuja</a>
+                    </span>
+                </div>
+
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage7.jpeg"
+                        data-songs="Songs/Zindagi Ek Safar - Andaaz (1971) 128 Kbps.mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage7.jpeg" alt="">
+                    <a href="Songs/Zindagi Ek Safar - Andaaz (1971) 128 Kbps.mp3">
+                        <h4>Zindagi Ek Safar - Andaaz (1971)</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Kishore Kumar</a>
+                    </span>
+                </div>
+
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage8.jpeg"
+                        data-songs="Songs/Sapphire (Mp3 Song)-(SambalpuriStar.In).mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage8.jpeg" alt="">
+                    <a href="Songs/Sapphire (Mp3 Song)-(SambalpuriStar.In).mp3">
+                        <h4>Sapphire</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Ed Sheeran</a>
+                        ,
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Arijit Singh</a>
+                    </span>
+                </div>
+
+
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage9.jpeg" data-songs="Songs/One-Kiss-Lofi.mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage9.jpeg" alt="">
+                    <a href="Songs/One-Kiss-Lofi.mp3">
+                        <h4>One Kiss</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Dua Lipa</a>
+                    </span>
+                </div>
+
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage10.jpeg"
+                        data-songs="Songs/Vaaste Nikhil Dsouza 128 Kbps.mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage10.jpeg" alt="">
+                    <a href="Songs/Vaaste Nikhil Dsouza 128 Kbps.mp3">
+                        <h4>Vaaste</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Dhvani Bhanushali</a>
+                        ,
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Nikhil D'Souza</a>
+                    </span>
+                </div>
+
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage11.jpeg"
+                        data-songs="Songs/Desi Kalakaar Yo Yo Honey Singh 128 Kbps.mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage11.jpeg" alt="">
+                    <a href="Songs/Desi Kalakaar Yo Yo Honey Singh 128 Kbps.mp3">
+                        <h4>Desi Kalakaar</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Yo Yo Honey Singh</a>
+                    </span>
+                </div>
+
+
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage12.jpeg"
+                        data-songs="Songs/Theres-Nothing-Holding-Me-Back.mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage12.jpeg" alt="">
+                    <a href="Songs/Theres-Nothing-Holding-Me-Back.mp3">
+                        <h4>There's Nothing Holding Me Back</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Shawn Mendes</a>
+                    </span>
+                </div>
+
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage13.jpeg"
+                        data-songs="Songs/Hua Hain Aaj Pehli Baar - Sanam Re 128 Kbps.mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage13.jpeg" alt="">
+                    <a href="Songs/Hua Hain Aaj Pehli Baar - Sanam Re 128 Kbps.mp3">
+                        <h4>Hua Hain Aaj Pehli Baar</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Armaan Malik</a>
+                        ,
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Palak Muchhal</a>
+                    </span>
+                </div>
+
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage14.jpeg" data-songs="Songs/Night Changes(PagalWorld).mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage14.jpeg" alt="">
+                    <a href="Songs/Night Changes(PagalWorld).mp3">
+                        <h4>Night Changes</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">John Ryan</a>
+                        ,
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Cheryl</a>
+                    </span>
+                </div>
+
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage15.jpeg"
+                        data-songs="Songs/Taarif Karoon Kya Uski - (Raag.Fm).mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage15.jpeg" alt="">
+                    <a href="Songs/Taarif Karoon Kya Uski - (Raag.Fm).mp3">
+                        <h4>Taarif Karoon Kya Uski</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Mohammed Rafi</a>
+                    </span>
+                </div>
+
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage16.jpeg"
+                        data-songs="Songs/Death Bed (PenduJatt.Com.Se).mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage16.jpeg" alt="">
+                    <a href="Songs/Death Bed (PenduJatt.Com.Se).mp3">
+                        <h4>Death Bed</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Powfu</a>
+                        ,
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Beabadoobee</a>
+                    </span>
+                </div>
+
+                <div class="card border">
+                    <div class="play" data-img="PlaylistImage17.jpeg"
+                        data-songs="Songs/My Name Is Anthony Gonsalves Amar Akbar Anthony 128 Kbps.mp3">
+                        <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            style="background: none;">
+                            <!-- Green circle filled -->
+                            <circle cx="50" cy="50" r="36" fill="#1ed760" stroke="#1ed760" stroke-width="5" />
+
+                            <!-- Play icon with 2px padding from top -->
+                            <g transform="translate(31, 28) scale(1.5)">
+                                <path
+                                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"
+                                    fill="black" />
+                            </g>
+                        </svg>
+                    </div>
+                    <img src="PlaylistImage17.jpeg" alt="">
+                    <a href="Songs/My Name Is Anthony Gonsalves Amar Akbar Anthony 128 Kbps.mp3">
+                        <h4>My Name Is Anthony Gonsalves</h4>
+                    </a>
+                    <span>
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Kishore Kumar</a>
+                        ,
+                        <a draggable="true" dir="auto" href="/artist/1wRPtKGflJrBx9BmLsSwlU">Amitabh Bachchan</a>
+                    </span>
+                </div>
+
+
+            </div>
+
+            <div class="playbar">
+                <div style="background-color: #1ed760;">
+                    <img src="PlaylistImage3.jpeg" alt="image change" id="PlayList-image">
+                    <span id="PlayList-songname">Sunflower (Spider-Man Into the Spider-Verse)</span>
+                </div>
+                <div class="songButtons">
+                    <!-- Play Pause And Next Button ..... -->
+                    <audio id="audioPlayer" controls style="display: none;"></audio>
+                    <img src="PreviousButton.svg" alt="previous" id="prevBtn" class="BCG">
+                    <img src="PlayList-Play.svg" alt="play" id="playBtn" class="BCG">
+                    <img src="NextButton.svg" alt="next" id="nextBtn" class="BCG">
+                </div>
+                <div class="volumeControl">
+                    <!-- Shuffle Mode -->
+                    <img src="Playlist-Shuffle.svg" alt="shuffle" id="shuffle" class="BCG">
+                    <!-- Volumme Controller -->
+                    <img src="Volume-Low.svg" alt="volume" id="volBtn" class="BCG">
+                    <input type="range" id="volumeChange" min="0" max="1" step="0.01" value="0.3" class="hidden">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/i18next@21.6.3/dist/umd/i18next.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

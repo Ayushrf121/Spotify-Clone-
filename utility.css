@@ -1,0 +1,40 @@
+.cardContainer::-webkit-scrollbar,
+.leftScrollableDiv::-webkit-scrollbar,
+body::-webkit-scrollbar
+{
+    width: 6px;
+}
+
+.cardContainer::-webkit-scrollbar-thumb,
+.leftScrollableDiv::-webkit-scrollbar-thumb,
+.body::-webkit-scrollbar-thumb 
+{
+    background: #3e3e3e;
+    border-radius: 10px;
+}
+
+.cardContainer::-webkit-scrollbar-track,
+.leftScrollableDiv::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track
+{
+    background: #1a1a1a;
+}
+
+
+
+.BCG
+{
+    background-color: var(--playButtonColor);
+    width: 2.2em;
+    transition: transform 0.28s ease-in-out;
+}
+.VolumeControl
+{
+    background-color: var(--playButtonColor);
+}
+
+.playbar>:nth-child(1) span
+{
+    background-color: var(--playButtonColor);
+    color: black;
+}

@@ -1,0 +1,680 @@
+* {
+    margin: 0px;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: white;
+    z-index: 10;
+}
+
+:root {
+    --svgColor: #b3b3b3;
+    --searchBox: #1F1F1F;
+    --playButtonColor: #1ed760;
+    --playButtonAtHover: #1fdf64;
+}
+
+#menuIcon {
+    display: none;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.2rem;
+    z-index: 20;
+}
+
+.navDiv1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+    height: 100%;
+}
+
+.navDiv1>:nth-child(1) {
+    width: 1em;
+    height: 16px;
+}
+
+.Searching-Box {
+    width: 25rem;
+    height: 65%;
+    border: 1px solid transparent;
+    background-color: var(--searchBox);
+    border-radius: 20px;
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Searching-Box:hover {
+    border: 1px solid #c6bebe;
+    transition: 0.58s ease-in-out;
+}
+
+.Searching-Box>:nth-child(1) {
+    width: 1.2em;
+    height: 20px;
+}
+
+.Searching-Box>:nth-child(2) {
+    background-color: var(--searchBox);
+    color: white;
+    border: none;
+    outline: none;
+    width: 26em;
+    height: 85%;
+}
+
+.navDiv2 {
+    height: 100%;
+    width: 34em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navDiv2 a {
+    text-decoration: none;
+}
+
+.navDiv2 a span {
+    font-size: 0.8em;
+    color: var(--svgColor);
+}
+
+.navDiv2 a span:hover {
+    color: white;
+    display: inline-block;
+    transform: scale(1.08);
+    transition: 0.3s ease-in-out;
+}
+
+.nD2One a {
+    text-decoration: none;
+    padding: 2px;
+}
+
+.nD2One a span {
+    font-size: 0.8em;
+    color: var(--svgColor);
+}
+
+.nD2One a span:hover {
+    color: white;
+    display: inline-block;
+    transform: scale(1.08);
+    transition: 0.3s ease-in-out;
+}
+
+.nD2Two>:nth-child(1) {
+    width: 1em;
+    height: 11px;
+
+}
+
+.nD2Two>:nth-child(2) {
+    font-size: 0.8em;
+    color: var(--svgColor);
+}
+
+.navDiv2>:nth-child(4) {
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 6em;
+    height: 2.5em;
+    background-color: white;
+    color: black;
+}
+
+.navDiv2>:nth-child(4):hover {
+    transform: scale(1.08);
+    transition: 0.3s ease-in-out;
+    background-color: rgb(227, 224, 224);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.leftMainDiv {
+    border-radius: 10px;
+    width: 25vw;
+    background-color: #121212;
+    height: 80vh;
+    padding: 4px 0 8px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.LMD1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: #121212;
+
+}
+
+.LMD1>:nth-child(2) {
+    width: 1em;
+    height: 16px;
+}
+
+.leftScrollableDiv {
+    height: 40vh;
+    padding: 6px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    overflow-y: scroll;
+    flex-shrink: 0;
+}
+
+.LSD {
+    height: 10rem;
+    padding: 14px;
+    background-color: var(--searchBox);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.LSD>:nth-child(1) {
+    font-weight: bolder;
+    background-color: var(--searchBox);
+
+}
+
+.LSD>:nth-child(2) {
+    background-color: var(--searchBox);
+    font-size: 0.9em;
+}
+
+.LSD>:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 3.3em;
+    border-radius: 18px;
+    border: 2px solid;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+.leftclickbutton {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.lcb1 {
+    width: 9.5em;
+}
+
+.lcb2 {
+    width: 10.8em;
+}
+
+.LSD>:nth-child(3):hover {
+    transform: scale(1.08);
+    transition: 0.3s ease-in-out;
+    background-color: rgb(227, 224, 224);
+}
+
+.LMD3 {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.LMD3-span {
+    font-size: 0.6em;
+    background-color: #121212;
+    color: var(--svgColor);
+}
+
+.LMD3-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #121212;
+
+}
+
+.LMD3-div>a {
+    background-color: #121212;
+    text-decoration: none;
+}
+
+.leftMainDiv>:nth-child(4) {
+    background-color: #121212;
+    padding-left: 12px;
+    padding-bottom: 12px;
+    font-size: 0.8em;
+    width: 5em;
+    text-decoration: none;
+}
+
+.leftMainDiv>:nth-child(4):hover {
+    text-decoration: underline;
+}
+
+#language {
+    background-color: #121212;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding-left: 4px;
+    width: 6em;
+}
+
+.rightMainDiv {
+    position: relative;
+    border-radius: 10px;
+    width: 70vw;
+    height: 97vh;
+    padding: 14px;
+    background-color: #121212;
+}
+
+.rightMainDiv>:nth-child(1) {
+    padding: 68px 0 0 0px;
+    background-color: #121212;
+
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 71px;
+    background-color: #121212;
+    overflow-y: scroll;
+    max-height: 70vh;
+}
+
+.card {
+    width: 190px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--searchBox);
+    position: relative;
+}
+
+.card a {
+    background-color: var(--searchBox);
+    text-decoration: none;
+    color: var(--svgColor);
+    font-size: 0.9em;
+}
+
+.card span,
+h4 {
+    background-color: var(--searchBox);
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.play {
+    position: absolute;
+    top: 9.3em;
+    right: 0.5em;
+    opacity: 0;
+    background: transparent;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px;
+    transform: translateY(10px);
+    transition: all 0.28s ease-in-out;
+}
+
+.card:hover .play {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.playbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 14px;
+    margin-bottom: 2.8px;
+    background-color: var(--playButtonColor);
+    height: 5.8vh;
+    width: 70vw;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.playbar>:nth-child(1) img {
+    margin-top: 4px;
+    width: 5vw;
+    height: 8vh;
+    border: 2px solid black;
+    border-radius: 6px;
+    filter: drop-shadow(1px -2px 3px rgb(139, 128, 128));
+}
+
+.playbar>:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    width: 16vw;
+    align-items: center;
+    gap: 4px;
+}
+
+.songButtons {
+    background-color: var(--playButtonColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    height: 3.2vh;
+    padding: 12px;
+}
+
+.BCG:hover {
+    transform: scale(1.08);
+    transition: transform 0.28s ease-in-out;
+    cursor: pointer;
+}
+
+.volumeControl {
+    width: 20%;
+    display: flex;
+    padding: 4px;
+    gap: 1em;
+    background-color: var(--playButtonColor);
+}
+
+#volumeChange {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.4s ease-in-out;
+}
+
+#volumeChange.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+@media only screen and (max-width:1500px) {
+
+    .playbar>:nth-child(1) {
+        width: 22vw;
+        height: 3rem;
+        gap: 8px;
+    }
+
+    .cardContainer {
+
+        gap: 40px;
+    }
+
+    .navDiv1 {
+        gap: 4px;
+    }
+}
+
+@media only screen and (max-width:1380px) {
+    .cardContainer {
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width:1298px) {
+    .cardContainer {
+        gap: 90px;
+    }
+}
+
+
+
+@media only screen and (max-width:1178px) {
+    .cardContainer {
+        gap: 71px;
+    }
+}
+
+
+@media only screen and (max-width:1110px) {
+    .Searching-Box {
+        width: 15rem;
+    }
+
+    .playbar>:nth-child(1) {
+        width: 28vw;
+
+    }
+
+    .cardContainer {
+        gap: 25px;
+    }
+
+    .playbar>:nth-child(1) img {
+        height: 5vh;
+    }
+}
+
+
+@media only screen and (max-width:985px) {
+    .cardContainer {
+        padding-left: 18px;
+        column-gap: 150px;
+    }
+    
+}
+
+@media only screen and (max-width:875px) {
+    #spotifyIcon {
+        padding-top: 19px;
+    }
+    
+    #menuIcon {
+        padding: 18px 0 0 30px;
+        display: inline-block;
+        z-index: 80;
+    }
+
+    .navDiv1 {
+        display: flex;
+        justify-content: center;
+        gap: 4em;
+        width: 30em;
+    }
+
+    .navDiv1>:nth-child(1) {
+        width: 5em;
+        height: 1.5em;
+    }
+
+    .Searching-Box {
+        width: 28em;
+        padding: 6px;
+    }
+
+    .navDiv2 {
+        position: absolute;
+        top: 2px;
+        left: -263px;
+        height: 105vh;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 50;
+        transition: 0.58s ease-in-out;
+
+    }
+
+    /* Called by JS using toggle */
+    .navDiv2Alternate {
+        left: 0;
+        transition: 0.58s ease-in-out;
+    }
+
+    .nD2One {
+        margin-top: 38px;
+        display: flex;
+        flex-direction: column;
+        gap: 109px;
+    }
+
+    .cardContainer {
+        padding-left: 18px;
+        column-gap: 4%;
+    }
+}
+
+@media only screen and (max-width:775px) {
+    #language {
+        position: relative;
+        left: 507px;
+        bottom: 264px;
+        font-size: 1.2em;
+    }
+    .leftMainDiv>:nth-child(4) 
+    {
+        font-size: 1.2em;
+    }
+    .LMD3 span {
+        font-size: 1em;
+    }
+    main {
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    .rightMainDiv {
+        width: 100%;
+    }
+
+    .playbar {
+        position: fixed;
+        bottom: 15px;
+        width: 96.5%;
+    }
+
+    .leftMainDiv {
+        width: 100%;
+    }
+
+    .leftScrollableDiv {
+        height: 15em;
+        flex-direction: row;
+        overflow-x: scroll;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .LMD1 {
+        font-size: 1.475rem;
+    }
+
+    .LSD {
+        width: 15em;
+    }
+
+    .playbar>:nth-child(1) span {
+        font-size: 0.775em;
+    }
+}
+
+@media only screen and (max-width:432px) {
+    nav {
+        gap: 30px;
+    }
+
+    .rightMainDiv {
+        width: 557px;
+        padding-left: 5em;
+    }
+
+    .leftMainDiv {
+        width: 635px;
+    }
+
+    .playbar>:nth-child(1) span {
+
+        width: 25em;
+        height: 50px;
+        margin-left: 22px;
+        padding-bottom: 15px;
+    }
+
+    .playbar>:nth-child(1) img {
+        height: 5vh;
+        width: 34px;
+    }
+
+    #language {
+        position: relative;
+        left: 507px;
+        font-size: 1.2em;
+        bottom: 109px;
+    }
+    .leftMainDiv>:nth-child(4) 
+    {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width:376px) {
+     #language {
+    position: relative;
+    left: 507px;
+    bottom: 80px;
+}
+    .leftMainDiv>:nth-child(4) 
+    {
+        position: relative;
+    bottom: 19px;
+    }
+
+}
