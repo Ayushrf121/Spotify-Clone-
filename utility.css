@@ -1,40 +1,56 @@
-.cardContainer::-webkit-scrollbar,
-.leftScrollableDiv::-webkit-scrollbar,
-body::-webkit-scrollbar
-{
-    width: 6px;
+/* ══════════════════════════════════════════════
+   UTILITY.CSS — Scrollbars & small helpers
+══════════════════════════════════════════════ */
+
+/* Custom scrollbars */
+.main-inner::-webkit-scrollbar,
+.lib-scroll::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 5px;
+}
+.main-inner::-webkit-scrollbar-thumb,
+.lib-scroll::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: #2e2e2e;
+  border-radius: 99px;
+}
+.main-inner::-webkit-scrollbar-track,
+.lib-scroll::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-.cardContainer::-webkit-scrollbar-thumb,
-.leftScrollableDiv::-webkit-scrollbar-thumb,
-.body::-webkit-scrollbar-thumb 
-{
-    background: #3e3e3e;
-    border-radius: 10px;
+/* Volume slider */
+#volumeChange {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100px;
+  height: 3px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.22);
+  outline: none;
+  cursor: pointer;
+  transition: opacity 0.3s, width 0.3s;
 }
-
-.cardContainer::-webkit-scrollbar-track,
-.leftScrollableDiv::-webkit-scrollbar-track,
-body::-webkit-scrollbar-track
-{
-    background: #1a1a1a;
+#volumeChange.hidden {
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
 }
-
-
-
-.BCG
-{
-    background-color: var(--playButtonColor);
-    width: 2.2em;
-    transition: transform 0.28s ease-in-out;
+#volumeChange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #1ed760;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(30, 215, 96, 0.5);
 }
-.VolumeControl
-{
-    background-color: var(--playButtonColor);
-}
-
-.playbar>:nth-child(1) span
-{
-    background-color: var(--playButtonColor);
-    color: black;
+#volumeChange::-moz-range-thumb {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #1ed760;
+  cursor: pointer;
+  border: none;
 }
